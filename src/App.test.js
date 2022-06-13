@@ -14,12 +14,12 @@ describe('TEST APP', () => {
 
   });
 
-  test('renders learn react link', () => {
+  test('renders learn react link', async () => {
     render(<App />);
     // const helloWorldElem = screen.queryByText(/hello2/i)
     // expect(helloWorldElem).toBeNull();
 
-    const helloWorldElem = screen.findByText(/hello2/i);
+    const helloWorldElem = await screen.findByText(/data/i);
     expect(helloWorldElem).toBeInTheDocument();
   });
 })
